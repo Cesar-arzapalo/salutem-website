@@ -71,6 +71,7 @@ export class CuestionarioComponent implements OnInit {
     this.definirColumnasXPagina();
 
     this.crearFormulario();
+    this.revizarValidesCuestionario(this.cuestionarioFomr.value);
     this.crearListener();
 
     this.loading = false;
@@ -110,13 +111,17 @@ export class CuestionarioComponent implements OnInit {
     }
   }
 
-  crearListener(){
-    this.cuestionarioFomr.valueChanges.subscribe((valor) => {
-      console.log(this.cuestionarioFomr);
+  revizarValidesCuestionario(valor: any){
+    console.log(this.cuestionarioFomr);
       this.valorCuestionario=valor;
-      console.log(valor);
       this.validarCuestionario();
       console.log(`valor del cuestionario: ${this.cuestionarioValido}`)
+  }
+
+  crearListener(){
+    this.cuestionarioFomr.valueChanges.subscribe((valor) => {
+      console.log(valor);
+      this.revizarValidesCuestionario(valor);
     });
     this.cuestionarioFomr.statusChanges.subscribe((status) => {
       console.log({status});
@@ -255,15 +260,16 @@ export class CuestionarioComponent implements OnInit {
           valorValido = isNumber.toString()!=='NaN';
           console.log(`==> ${valorValido} - ${index+1}`);
         }else{
-          for (let i = 0; i < preguntaM.alternativas.length ; i += 1){
-            const valor = this.valorCuestionario[`pregunta ${ index+ 1}`][`pregunta ${index + 1} - alternativa ${i + 1}`];
+          // for (let i = 0; i < preguntaM.alternativas.length ; i += 1){
+          //   const valor = this.valorCuestionario[`pregunta ${ index+ 1}`][`pregunta ${index + 1} - alternativa ${i + 1}`];
   
-            if ( valor !== null && valor !== false ){
-              console.log(valor,index+1,i+1);
-              valorValido = valor;
-            }
+          //   if ( valor !== null && valor !== false ){
+          //     console.log(valor,index+1,i+1);
+          //     valorValido = valor;
+          //   }
             
-          }
+          // }
+          valorValido = true;
           console.log(`==> ${valorValido} - ${index+1}`);
           
         }
