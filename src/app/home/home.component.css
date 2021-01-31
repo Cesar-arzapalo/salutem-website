@@ -41,7 +41,8 @@ body {
 .col-der {
     width: 50%;
     float: right;
-    background-color: #121212;/*#C5C3FF;*/
+    background-color: #121212;
+    /*#C5C3FF;*/
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     color: white;
@@ -68,8 +69,13 @@ body {
     height: 200px;
 }
 
+.desc h4 a {
+    text-decoration: none;
+    color: white;
+}
 
-/***********Unico PROBLEMA NECESITO Q LA ALTURA 
+
+/*****Unico PROBLEMA NECESITO Q LA ALTURA 
 DE LA IMAGEN VARIE CON EL TEXTO*/
 
 .con-img {
@@ -132,32 +138,38 @@ DE LA IMAGEN VARIE CON EL TEXTO*/
     color: white;
 }
 
-h4{
+h4 {
     font-weight: bold;
 }
 
-p{
-    line-height : 35px;
+p {
+    line-height: 35px;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #6A64FF!important;
     font-weight: bold;
     border: none;
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: #A0A0A0!important;
     color: #000;
     font-weight: bold;
     border: none;
 }
 
-.btn{
+.btn {
     padding-top: 12px;
     padding-bottom: 12px;
 }
 
-.btnSeccion{
+.btnSeccion {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.tema h4 a {
+    text-decoration: none;
+    color: white;
 }

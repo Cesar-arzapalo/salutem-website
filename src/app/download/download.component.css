@@ -21,3 +21,21 @@ p {
 .imagenes {
     color: white;
 }
+
+.btn-primary{
+    background-color: #6A64FF!important;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-secondary{
+    background-color: #A0A0A0!important;
+    color: #000;
+    border: none;
+    font-weight: bold;
+}
+
+.btn{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
