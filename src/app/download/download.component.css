@@ -1,6 +1,5 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
-
 .contenedor {
     margin: 10px;
 }
@@ -14,10 +13,50 @@ p {
 }
 
 .imagenes {
-    width: 300px;
+    width: 70%;
     margin: 0 auto;
 }
 
 .imagenes {
+    color: white;
+}
+
+
+/* external css: flickity.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.gallery {
+    background: #EEE;
+}
+
+.gallery-cell {
+    width: 28%;
+    height: 650px;
+    margin-right: 10px;
+    background: #8C8;
+    counter-increment: gallery-cell;
+}
+
+.gallery-cell.is-selected {
+    background: #ED2;
+}
+
+
+/* cell number */
+
+.gallery-cell:before {
+    display: block;
+    text-align: center;
+    /*content: counter(img);*/
+    line-height: 100%;
+    font-size: 80px;
     color: white;
 }
