@@ -1,22 +1,22 @@
 <form [formGroup]="cuestionarioFomr" (ngSubmit)="analizar()">
     <div class="card" *ngFor=" let pregunta of cuestionario.preguntas; let idx=index ">
         <div *ngIf="!loading && paginaActual == pregunta.nroPagina;">
-            <div class="card-header" color="primary ">
+            <div class="card-header" >
                 <div class="descripcion ">{{idx+1}}. {{pregunta.descripcion}}</div>
             </div>
             <div class="card-body">
                 <ul class="list-group" *ngIf="pregunta.tipoAlternativa==1" [formGroupName]="nombreGrupos[idx]">
-                    <li *ngFor="let alternativa of pregunta.alternativas; let aIdx = index ">
-                        <input class="form-check-input" type="checkbox" [value]=false [formControlName]="nombreControles[idx][aIdx]" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault"  class="form-control" >
-                            <label class="alternativas">{{alternativa}}</label>
+                    <li class = "" *ngFor="let alternativa of pregunta.alternativas; let aIdx = index ">
+                        <input class=" form-check-input" type="checkbox" [value]=false [formControlName]="nombreControles[idx][aIdx]" id="flexCheckDefault">
+                        <label class=" form-check-label respuesta form-control" for="flexCheckDefault"  >
+                            <label class="alternativas ">{{alternativa}}</label>
                         </label>
                     </li>
                 </ul>
                 <ul class="list-group" *ngIf="pregunta.tipoAlternativa==2" >
                     <li *ngFor="let alternativa of pregunta.alternativas; let aIdx = index " >  
                         <input class="form-check-input" type="radio"  [formControlName]="nombreControles[idx][0]"  [name]="nombreControles[idx][0]" [value]="aIdx" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1"  class="form-control" >
+                        <label class="form-check-label respuesta form-control" for="flexRadioDefault1"   >
                             <label class="alternativas">{{alternativa}}</label>
                         </label>
                     </li>
