@@ -25,23 +25,21 @@
         </div>
     </div>
     <div *ngIf="paginaActual == cuestionario.nroPaginaAsignada">
-        <div color="ion-background-color">
-            <div class="row text-center ">
-                <div class=´col-md-{{colVolver}}´ *ngIf="paginaActual!=1">
-                    <button (click)="rergesarCuestionario()" >
-                        Volver
-                    </button>
-                </div>
-                <div class=´col-md-{{colSiguiente}}´ *ngIf="paginaActual!=cantidadCuestionarios">
-                    <button (click)="pasarCuestionario()" [disabled]="!cuestionarioFomr.valid">
-                        Siguiente
-                    </button>
-                </div>
-                <div class=´col-md-{{colFinalizar}}´ *ngIf="paginaActual==cantidadCuestionarios">
-                    <button (click)="finalizarCuestionario()" [disabled]="!cuestionarioFomr.valid">
-                        Finalizar
-                    </button>
-                </div>
+        <div class="row text-center  ">
+            <div class="col-md-{{colVolver}}" *ngIf="paginaActual!=1">
+                <button  class="btn btn-primary" (click)="rergesarCuestionario()" >
+                    Volver
+                </button>
+            </div>
+            <div class="col-md-{{colSiguiente}}" *ngIf="paginaActual!=cantidadCuestionarios">
+                <button class="btn btn-primary" (click)="pasarCuestionario()" [disabled]="!cuestionarioFomr.valid">
+                    Siguiente
+                </button>
+            </div>
+            <div class="col-md-{{colFinalizar}}" *ngIf="paginaActual==cantidadCuestionarios">
+                <button class="btn btn-primary" (click)="finalizarCuestionario()" [disabled]="!cuestionarioFomr.valid">
+                    Finalizar
+                </button>
             </div>
         </div>
     </div>

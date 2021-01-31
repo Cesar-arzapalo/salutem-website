@@ -1,5 +1,7 @@
 .card-header{
     background-color: #6A64FF;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .card{
@@ -9,11 +11,9 @@
 
 .card-body{
     background-color: #121212;
+    font-size: 20px;
 }
 
-.verificacion-campo{
-
-}
 
 .respuesta{
     display: inline;
@@ -24,5 +24,26 @@
 }
 
 ul,li{
-    list-style:none;    
+    list-style:none;
+    padding: 5px 0;
+}
+.btn-primary{
+    background-color: #6A64FF!important;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-secondary{
+    background-color: #A0A0A0!important;
+    color: #000;
+    border: none;
+    font-weight: bold;
+}
+
+.btn{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.col-button{
+    display: inline;
 }
